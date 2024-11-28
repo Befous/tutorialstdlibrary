@@ -7,5 +7,8 @@ import (
 )
 
 func ContohRoute(app *http.ServeMux) {
-	app.HandleFunc("GET /contoh/{z}", handler.ContohHandler)
+	app.HandleFunc("GET /routeget/{z}", handler.ContohHandler)
+	app.HandleFunc("POST /routepost/{z}", handler.ContohHandler)
+	app.HandleFunc("PUT /routeput/{z}", handler.ContohHandler)
+	app.HandleFunc("DELETE /routedelete/{z}", handler.ContohHandler)
 }
